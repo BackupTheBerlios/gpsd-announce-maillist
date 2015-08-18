@@ -1,0 +1,85 @@
+From esr at snark.thyrsus.com  Sat Jan  1 17:33:07 2005
+From: esr at snark.thyrsus.com (Eric S. Raymond)
+Date: Sat, 1 Jan 2005 11:33:07 -0500
+Subject: [Gpsd-announce] Announcing release 2.6 of gpsd
+Message-ID: <200501011633.j01GX7Y7012513@snark.thyrsus.com>
+
+Release 2.6 of gpsd is now available at:
+
+	http://developer.berlios.de/projects/gpsd/
+
+Here are the most recent changes:
+
+- Petter Reinholdtsen's fix for gps.py buffering.  Fix syntax errors
+  in udev scriptlets.  Clean up after GCC warning messages.  Drop use of 
+  vsprintf, so we get a link-time error on systems that might produce 
+  buffer overruns (all modern Unixes support vsnsprintf which is safe).
+
+--
+                             shipper, acting for esr at snark.thyrsus.com
+
+
+From esr at thyrsus.com  Fri Jan 14 22:24:56 2005
+From: esr at thyrsus.com (Eric S. Raymond)
+Date: Fri, 14 Jan 2005 16:24:56 -0500
+Subject: [Gpsd-announce] Announcing release 2.7 of gpsd
+Message-ID: <200501142124.j0ELOumQ008176@snark.thyrsus.com>
+
+Release 2.7 of gpsd is now available at:
+
+	http://developer.berlios.de/projects/gpsd/
+
+Here are the most recent changes:
+
+- More compiler-warning cleanups.  gps client name changed to xgps.
+  Added --speedunits option to xgpsspeed, --speedunits and --altunits
+  options to xgps.  Improved GPGSV parsing so it copes gracefully if
+  we start in the middle of a sequence.  Merged Petter Reinholdtsen's
+  fix for GPGSA lists with holes.  In xgps, satellites used in the
+  last fix are now dotted in the middle.  New -P option to create
+  pidfile.  Audited for potential buffer overruns, found and fixed
+  two.
+
+--
+                             shipper, acting for esr at snark.thyrsus.com
+
+
+From esr at thyrsus.com  Thu Jan 27 11:13:07 2005
+From: esr at thyrsus.com (Eric S. Raymond)
+Date: Thu, 27 Jan 2005 05:13:07 -0500
+Subject: [Gpsd-announce] Announcing release 2.8 of gpsd
+Message-ID: <200501271013.j0RAD7St016846@snark.thyrsus.com>
+
+Release 2.8 of gpsd is now available at:
+
+	http://developer.berlios.de/projects/gpsd/
+
+Here are the most recent changes:
+
+  Embarrassing typo fix in gps.py. Avoid buffer overrun in xgps.c.
+  Plug Debian security bug 292347.  This version issued on an emergency
+  basis without Python libraries, which have packaging problems due 
+  to the 2.3/2.4 transition.
+
+--
+                             shipper, acting for esr at snark.thyrsus.com
+
+
+From esr at thyrsus.com  Thu Jan 27 23:16:38 2005
+From: esr at thyrsus.com (Eric S. Raymond)
+Date: Thu, 27 Jan 2005 17:16:38 -0500
+Subject: [Gpsd-announce] Announcing release 2.9 of gpsd
+Message-ID: <200501272216.j0RMGcQu022592@snark.thyrsus.com>
+
+Release 2.9 of gpsd is now available at:
+
+	http://developer.berlios.de/projects/gpsd/
+
+Here are the most recent changes:
+
+- Python files restored to RPM.
+
+--
+                             shipper, acting for esr at snark.thyrsus.com
+
+

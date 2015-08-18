@@ -1,0 +1,65 @@
+From esr at snark.thyrsus.com  Fri Apr  1 02:36:37 2005
+From: esr at snark.thyrsus.com (Eric S. Raymond)
+Date: Thu, 31 Mar 2005 19:36:37 -0500
+Subject: [Gpsd-announce] Announcing release 2.20 of gpsd
+Message-ID: <200504010036.j310abN1029199@snark.thyrsus.com>
+
+Release 2.20 of gpsd is now available at:
+
+	http://developer.berlios.de/projects/gpsd/
+
+Here are the most recent changes:
+
+- Rob Janssen's patches to fix timezone issues and improve cooperation
+  with NTP.  License changed to BSD so linking to libgps won't make people 
+  nervous.  gpsprobe and gpsd.py are obsolete and have been removed, the 
+  autoprobe and profiling capabilities in the daemon more than replace 
+  them.  gpsprof now ships self-contained GNUPLOT scripts to stdout,
+  so they can be saved and redisplayed.  Zodiac sort of works again, but 
+  occasionally spins madly during autobauding.
+
+--
+                             shipper, acting for esr at snark.thyrsus.com
+
+
+From esr at snark.thyrsus.com  Wed Apr 13 02:10:08 2005
+From: esr at snark.thyrsus.com (Eric S. Raymond)
+Date: Tue, 12 Apr 2005 20:10:08 -0400
+Subject: [Gpsd-announce] Announcing release 2.21 of gpsd
+Message-ID: <200504130010.j3D0A8ws026247@snark.thyrsus.com>
+
+Release 2.21 of gpsd is now available at:
+
+	http://developer.berlios.de/projects/gpsd/
+
+Here are the most recent changes:
+
+- Add tag and timestamp to Y response.  Use computed geoid separation as 
+  SiRF packet 42 is flaky.  Security fix: hotplug scripts now do device
+  add/removes through a separate local control channel.  True multi-device
+  support is in place.  When in watcher mode, device switches are announced.
+
+--
+                             shipper, acting for esr at snark.thyrsus.com
+
+
+From esr at snark.thyrsus.com  Mon Apr 25 23:01:42 2005
+From: esr at snark.thyrsus.com (Eric S. Raymond)
+Date: Mon, 25 Apr 2005 17:01:42 -0400
+Subject: [Gpsd-announce] Announcing release 2.22 of gpsd
+Message-ID: <200504252101.j3PL1gC2023602@snark.thyrsus.com>
+
+Release 2.22 of gpsd is now available at:
+
+	http://developer.berlios.de/projects/gpsd/
+
+Here are the most recent changes:
+
+- SiRF-binary driver can now get leap-second corrections from subframe data.
+  Device add/delete commands now send back OK or ERROR.  Error-modeling
+  corrections from the SiRF folks.  Higher precision in position reports.
+
+--
+                             shipper, acting for esr at snark.thyrsus.com
+
+

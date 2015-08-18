@@ -1,0 +1,32 @@
+From esr at snark.thyrsus.com  Wed Jun 22 14:17:47 2005
+From: esr at snark.thyrsus.com (Eric S. Raymond)
+Date: Wed, 22 Jun 2005 08:17:47 -0400
+Subject: [Gpsd-announce] Announcing release 2.26 of gpsd
+Message-ID: <200506221217.j5MCHlWD000408@snark.thyrsus.com>
+
+Release 2.26 of gpsd is now available at:
+
+	http://developer.berlios.de/projects/gpsd/
+
+Here are the most recent changes:
+
+- Time DOP and total DOP are now passed on from GPSes that report
+  them.  Ensure longitude has a leading zero when <100, for
+  compatibility with gpsdrive.  Synchronous and thread hooks are now
+  separate in the client library.  Packet-sniffing on a new device no
+  longer holds up incoming data on already-connected ones.  There is
+  now a super-raw mode (R=2) that dumps a hex-encoding of every binary
+  packet received to the client; sirfmon uses it to operate through
+  the daemon if one is running.  Support for Trimble TSIP GPSes
+  merged. gpsfake now works with SiRF and Zodiac logs.  Python library
+  supports thread callbacks.  New -p option of gpsfake supports
+  regression testing of the daemon, and there is a test suite included
+  with the distribution.  PPS support is turned off, as there is some
+  pthreads problem that sometimes kills the daemon on pthreads exit.
+  Correct off-by-one error in GPZDA processing.  The code has been
+  audited and cleaned with splint (www.splint.org).
+
+--
+                             shipper, acting for esr at snark.thyrsus.com
+
+

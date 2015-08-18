@@ -1,0 +1,21 @@
+From esr at snark.thyrsus.com  Wed Sep 14 14:22:26 2005
+From: esr at snark.thyrsus.com (Eric S. Raymond)
+Date: Wed, 14 Sep 2005 08:22:26 -0400
+Subject: [Gpsd-announce] Announcing release 2.30 of gpsd
+Message-ID: <200509141222.j8ECMQM7026837@snark.thyrsus.com>
+
+Release 2.30 of gpsd is now available at:
+
+	http://developer.berlios.de/projects/gpsd/
+
+Here are the most recent changes:
+
+- Prevent core dump on -d option.  The .log option is no longer required for
+  test loads.  cgps and xgps now have configurable latitude/longitude formats 
+  via the -l option.  Introduced new 'g' command that allows clients to
+  specify whether they want GPS or RTCM104 information.
+
+--
+                             shipper, acting for esr at snark.thyrsus.com
+
+

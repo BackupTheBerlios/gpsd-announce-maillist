@@ -1,0 +1,22 @@
+From esr at thyrsus.com  Fri Dec 15 03:55:45 2006
+From: esr at thyrsus.com (Eric S. Raymond)
+Date: Thu, 14 Dec 2006 21:55:45 -0500
+Subject: [Gpsd-announce] [Gpsd-users] Announcing the release of gpsd 2.34
+In-Reply-To: <91981b3e0612141842v7cd586fy3d8bdd74b6d1d425@mail.gmail.com>
+References: <91981b3e0612141842v7cd586fy3d8bdd74b6d1d425@mail.gmail.com>
+Message-ID: <20061215025545.GA16784@thyrsus.com>
+
+Chris Kuethe <chris.kuethe at gmail.com>:
+> This is the first release with me wearing the "release engineer" hat -
+> my apologies if I munged the release files.
+
+This one was a bit bumpy, but no more so than I'd expect first time out.
+A round of applause for Chris, everybody!
+
+And a good thing it is for me not to be indispensibly critical-path on this.
+While I don't plan on leaving the project in the foreseable future, it's
+comforting to know that we're growing more leadership.
+-- 
+		<a href="http://www.catb.org/~esr/">Eric S. Raymond</a>
+
+

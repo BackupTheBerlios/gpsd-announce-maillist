@@ -1,0 +1,26 @@
+From esr at snark.thyrsus.com  Fri Aug 19 18:23:27 2005
+From: esr at snark.thyrsus.com (Eric S. Raymond)
+Date: Fri, 19 Aug 2005 12:23:27 -0400
+Subject: [Gpsd-announce] Announcing release 2.29 of gpsd
+Message-ID: <200508191623.j7JGNRUv018328@snark.thyrsus.com>
+
+Release 2.29 of gpsd is now available at:
+
+	http://developer.berlios.de/projects/gpsd/
+
+Here are the most recent changes:
+
+- Added Sony CXD2951 support, untested.  All error estimates are
+  now nailed to 95% confidence interval.  Added rtcmdecode and its
+  documentation; also, gpsd can now monitor serial devices emitting 
+  RTCM104 and display differential-GPS data in a readable format; also,
+  gpsd can now serve RTCM104 on port 2101.  Added dangerous alpha version 
+  of gpsflash.  Work around a nasty bug in the i.Trek M3's firmware.
+  Added support for True North Technologies Revolution 2X Digital compass.
+  Added the gpxlogger client for systems with DBUS support and the
+  gpspipe and cgps clients for general use.
+
+--
+                             shipper, acting for esr at snark.thyrsus.com
+
+

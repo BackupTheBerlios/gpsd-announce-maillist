@@ -1,0 +1,149 @@
+From esr at snark.thyrsus.com  Wed Mar  2 16:47:09 2005
+From: esr at snark.thyrsus.com (Eric S. Raymond)
+Date: Wed, 2 Mar 2005 10:47:09 -0500
+Subject: [Gpsd-announce] Announcing release 2.15 of gpsd
+Message-ID: <200503021547.j22Fl998005596@snark.thyrsus.com>
+
+Release 2.15 of gpsd is now available at:
+
+	http://developer.berlios.de/projects/gpsd/
+
+Here are the most recent changes:
+
+- A new packet engine autobauds much more quickly, and now iterates
+  over both 1 and 2 stopbits. Explicit support for FV18 (the -T f
+  option) is gone; instead, gpsd syncs with any 7N2 device and always
+  ships a suitable init string.  New E command, supporting the Garmin
+  position-error sentence or computing these numbers from DOP and an
+  error model. New U command reports climb/sink from GPSes that report
+  vertical velocity.  There is a prototype driver for SiRF-binary GPses,
+  invoked automatically when SiRF packets present themselves on the
+  wire after device open.
+
+--
+                             shipper, acting for esr at snark.thyrsus.com
+
+
+From esr at snark.thyrsus.com  Fri Mar 11 14:52:22 2005
+From: esr at snark.thyrsus.com (Eric S. Raymond)
+Date: Fri, 11 Mar 2005 08:52:22 -0500
+Subject: [Gpsd-announce] Announcing release 2.16 of gpsd
+Message-ID: <200503111352.j2BDqMxk018306@snark.thyrsus.com>
+
+Release 2.16 of gpsd is now available at:
+
+	http://developer.berlios.de/projects/gpsd/
+
+Here are the most recent changes:
+
+- New F command allows changing the GPS device after startup time.
+  Hotplug scripts to go with it are now installed by the RPM.  The
+  Garmin probe is working.  The -T and -s options are gone.  We have 
+  achieved zero configuration!
+
+--
+                             shipper, acting for esr at snark.thyrsus.com
+
+
+From esr at snark.thyrsus.com  Wed Mar 16 22:59:40 2005
+From: esr at snark.thyrsus.com (Eric S. Raymond)
+Date: Wed, 16 Mar 2005 16:59:40 -0500
+Subject: [Gpsd-announce] Announcing release 2.17 of gpsd
+Message-ID: <200503162159.j2GLxe57010548@snark.thyrsus.com>
+
+Release 2.17 of gpsd is now available at:
+
+	http://developer.berlios.de/projects/gpsd/
+
+Here are the most recent changes:
+
+- Fix packet-engine problem that made disconnect/reconnect unreliable
+  (important!).  Fix bonehead error in interpretation of PGRME.  We 
+  don't use O_SYNC (it turned out not to be reliable) so remove it to make 
+  life easier under Mac OS X.  Allow gpsfake to accept subsecond cycle times.
+  Add a FAQ to the HTML documentation.  gps_poll() now handles multi-line
+  responses.  Add N command for switching driver modes.
+
+--
+                             shipper, acting for esr at snark.thyrsus.com
+
+
+From esr at snark.thyrsus.com  Wed Mar 23 20:32:00 2005
+From: esr at snark.thyrsus.com (Eric S. Raymond)
+Date: Wed, 23 Mar 2005 14:32:00 -0500
+Subject: [Gpsd-announce] Announcing release 2.18 of gpsd
+Message-ID: <200503231932.j2NJW0Im013559@snark.thyrsus.com>
+
+Release 2.18 of gpsd is now available at:
+
+	http://developer.berlios.de/projects/gpsd/
+
+Here are the most recent changes:
+
+- First cut at cooperating with NTP.  Major library restructuring; 
+  a fix is now a data structure of its own, and per-field timestamps 
+  are gone. Use new 'o' command for watcher mode.  Compute some estimated 
+  error bounds.
+
+--
+                             shipper, acting for esr at snark.thyrsus.com
+
+
+From gem at rellim.com  Wed Mar 23 20:40:43 2005
+From: gem at rellim.com (Gary E. Miller)
+Date: Wed, 23 Mar 2005 11:40:43 -0800 (PST)
+Subject: [Gpsd-announce] Re: [Gpsd-dev] Announcing release 2.18 of gpsd
+In-Reply-To: <200503231932.j2NJW0fL013569@snark.thyrsus.com>
+References: <200503231932.j2NJW0fL013569@snark.thyrsus.com>
+Message-ID: <Pine.LNX.4.62.0503231139130.23151@catbert.rellim.com>
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+Yo All!
+
+On Wed, 23 Mar 2005, Eric S. Raymond wrote:
+
+> Release 2.18 of gpsd is now available at:
+
+Garmin binary support is broken in 2.18.  Can I get a days notice for
+testing next time before a release?
+
+RGDS
+GARY
+- ---------------------------------------------------------------------------
+Gary E. Miller Rellim 20340 Empire Blvd, Suite E-3, Bend, OR 97701
+	gem at rellim.com  Tel:+1(541)382-8588 Fax: +1(541)382-8676
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.3 (GNU/Linux)
+
+iD8DBQFCQcY+8KZibdeR3qURAvf+AJ9zs9DJeIDmYWeUjUL9855o4lwY8QCgw487
+nyau6bqBmEvdDHlEOOxVhh8=
+=+eE2
+-----END PGP SIGNATURE-----
+
+
+
+From esr at snark.thyrsus.com  Sun Mar 27 01:26:26 2005
+From: esr at snark.thyrsus.com (Eric S. Raymond)
+Date: Sat, 26 Mar 2005 19:26:26 -0500
+Subject: [Gpsd-announce] Announcing release 2.19 of gpsd
+Message-ID: <200503270026.j2R0QQ2N006021@snark.thyrsus.com>
+
+Release 2.19 of gpsd is now available at:
+
+	http://developer.berlios.de/projects/gpsd/
+
+Here are the most recent changes:
+
+- Fix brown-paper-bag bug with NMEA parsing. Set SiRF GPSes to use
+  SBAS.  sirfmon now displays SBAS parameters, and is included in the
+  installed programs.  Add to FAQ a fix for spurious high speeds reported
+  in XTrac mode.  We now interpret GPZDA.  We no longer fudge a missing 
+  ddmmyy in NMEA timestamps from the system clock, so replay will work better.
+
+--
+                             shipper, acting for esr at snark.thyrsus.com
+
+

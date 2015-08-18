@@ -1,0 +1,86 @@
+From esr at snark.thyrsus.com  Wed May  4 20:07:26 2005
+From: esr at snark.thyrsus.com (Eric S. Raymond)
+Date: Wed, 4 May 2005 14:07:26 -0400
+Subject: [Gpsd-announce] Announcing release 2.23 of gpsd
+Message-ID: <200505041807.j44I7QqQ003279@snark.thyrsus.com>
+
+Release 2.23 of gpsd is now available at:
+
+	http://developer.berlios.de/projects/gpsd/
+
+Here are the most recent changes:
+
+- For better security, the daemon now drops root privileges after startup.
+  gpsd-clients is now a separate RPM; this is helpful on lean systems
+  that don't run X.  The O command now reports speeds in meters per second 
+  rather than knots, client code has been adjusted so there is no user-visible
+  change.  We now compute the missing components of DOP when using SiRF chips.
+  /dev/gps is no longer special; there is no default GPS device unless you
+  specify one.  The intermittent processor-hogging problem introduced by the
+  control-channel change in 2.21 has been solved.
+
+--
+                             shipper, acting for esr at snark.thyrsus.com
+
+
+From esr at snark.thyrsus.com  Tue May 17 18:48:26 2005
+From: esr at snark.thyrsus.com (Eric S. Raymond)
+Date: Tue, 17 May 2005 12:48:26 -0400
+Subject: [Gpsd-announce] Announcing release 2.24 of gpsd
+Message-ID: <200505171648.j4HGmQIS001841@snark.thyrsus.com>
+
+Release 2.24 of gpsd is now available at:
+
+	http://developer.berlios.de/projects/gpsd/
+
+Here are the most recent changes:
+
+- Crazy-speed bug is finally fixed. Autobauding now starts with the
+  current speed of the device, not the stored gpsd speed; this means
+  hunting only takes place when device and GPS speed aren't matched.  
+  xgpsspeed unit-conversion bug introduced in 2.22 is fixed.  Satellite
+  display now really shows 12 channels, not just 11.  Make configure
+  honor the --without-x option.  Major improvements in ntp notifications.
+
+--
+                             shipper, acting for esr at snark.thyrsus.com
+
+
+From flynclippr at yahoo.com  Wed May 18 08:24:11 2005
+From: flynclippr at yahoo.com (Dat Phan)
+Date: Tue, 17 May 2005 23:24:11 -0700 (PDT)
+Subject: [Gpsd-announce] Re: [Gpsd-users] Announcing release 2.24 of gpsd
+In-Reply-To: 6667
+Message-ID: <20050518062411.62311.qmail@web81703.mail.yahoo.com>
+
+Yay the speed bug is fixed.
+
+Dat
+
+
+From esr at snark.thyrsus.com  Sat May 21 06:19:27 2005
+From: esr at snark.thyrsus.com (Eric S. Raymond)
+Date: Sat, 21 May 2005 00:19:27 -0400
+Subject: [Gpsd-announce] Announcing release 2.25 of gpsd
+Message-ID: <200505210419.j4L4JRTf032183@snark.thyrsus.com>
+
+Release 2.25 of gpsd is now available at:
+
+	http://developer.berlios.de/projects/gpsd/
+
+Here are the most recent changes:
+
+- Various signedness and scaling fixes and an OpenBSD port patch for the 
+  Zodiac driver. Command-line arguments to gpsd are now treated as a default 
+  device list; -f is still supported but deprecated.  sirfmon now tries not
+  changing the line speed first, so it syncs up much faster.  Prevent a 
+  potential buffer overrun in the client library.  PPS-thread support is now
+  on by default.  Lots of documentation improvements. D-BUS broadcast support 
+  by Amaury Jacquot.  Added Alfredo Pironti's thread-callback and C++
+  support.  gpsd no longer uses the system clock for anything, so it
+  can be used to set that clock.
+
+--
+                             shipper, acting for esr at snark.thyrsus.com
+
+

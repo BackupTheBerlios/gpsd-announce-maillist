@@ -1,0 +1,43 @@
+From esr at snark.thyrsus.com  Wed Dec 15 17:51:17 2004
+From: esr at snark.thyrsus.com (Eric S. Raymond)
+Date: Wed, 15 Dec 2004 11:51:17 -0500
+Subject: [Gpsd-announce] Announcing release 2.4 of gpsd
+Message-ID: <200412151651.iBFGpHXp021909@snark.thyrsus.com>
+
+Release 2.4 of gpsd is now available at:
+
+	http://developer.berlios.de/projects/gpsd/
+
+Here are the most recent changes:
+
+- Minor bugs in gpsd.py fixed.  M now returns 0 status if GPGSA not yet
+  seen; this change also fixes a bug where gpsd claimed it was confused
+  if GPGSA had not been seen and status was set.  RPM will now install 
+  a udevd rule if the host system uses it.  Don't set the online flag
+  on activate.  HP port changes and -Wall cleanup.  James Cameron's 
+  fixes to clean up gps.c and use X timeouts rather than alarms.
+
+--
+                             shipper, acting for esr at snark.thyrsus.com
+
+
+From esr at snark.thyrsus.com  Thu Dec 23 17:33:07 2004
+From: esr at snark.thyrsus.com (Eric S. Raymond)
+Date: Thu, 23 Dec 2004 11:33:07 -0500
+Subject: [Gpsd-announce] Announcing release 2.5 of gpsd
+Message-ID: <200412231633.iBNGX7ev004602@snark.thyrsus.com>
+
+Release 2.5 of gpsd is now available at:
+
+	http://developer.berlios.de/projects/gpsd/
+
+Here are the most recent changes:
+
+- Use gmtime instead of localtime when guessing the day or year of a date;
+  this avoids jitter in the day after 19:00 GMT.  Added -v option to dump 
+  version and exit.  Commented out a crash-causing debug line in gps.py.
+
+--
+                             shipper, acting for esr at snark.thyrsus.com
+
+

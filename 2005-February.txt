@@ -1,0 +1,119 @@
+From esr at snark.thyrsus.com  Thu Feb  3 12:41:46 2005
+From: esr at snark.thyrsus.com (Eric S. Raymond)
+Date: Thu, 3 Feb 2005 06:41:46 -0500
+Subject: [Gpsd-announce] Announcing release 2.10 of gpsd
+Message-ID: <200502031141.j13Bfk2q019542@snark.thyrsus.com>
+
+Release 2.10 of gpsd is now available at:
+
+	http://developer.berlios.de/projects/gpsd/
+
+Here are the most recent changes:
+
+- Add -N option to explicitly foreground the daemon.  Fixed a bug
+  that was causing gpsd to keep reopening the GPS device after
+  leaving raw or watcher mode.  Fixed Gary Miller's core-dump bug.
+
+--
+                             shipper, acting for esr at snark.thyrsus.com
+
+
+From esr at snark.thyrsus.com  Fri Feb 11 00:25:00 2005
+From: esr at snark.thyrsus.com (Eric S. Raymond)
+Date: Thu, 10 Feb 2005 18:25:00 -0500
+Subject: [Gpsd-announce] Announcing release 2.11 of gpsd
+Message-ID: <200502102325.j1ANP0Ot007589@snark.thyrsus.com>
+
+Release 2.11 of gpsd is now available at:
+
+	http://developer.berlios.de/projects/gpsd/
+
+Here are the most recent changes:
+
+- Added gpsprof and the capability to generate GPS latency profiles.
+  gpsprobe now hunts through plausible baud rates when looking for NMEA
+  data from a GPS. The -b (baudrate) option fixes a speed, disabling
+  the baud-matching logic.  Also, gpsprobe can now recognize SiRF 
+  protocol, though not speak it.  Fixed a math domain error in 
+  gps.EarthDistance due to numeric blowup on points very close together,
+  and another in gps.MeterOffset() that was screwing up gpsprobe plots.
+
+--
+                             shipper, acting for esr at snark.thyrsus.com
+
+
+From esr at snark.thyrsus.com  Tue Feb 15 11:49:48 2005
+From: esr at snark.thyrsus.com (Eric S. Raymond)
+Date: Tue, 15 Feb 2005 05:49:48 -0500
+Subject: [Gpsd-announce] Announcing release 2.12 of gpsd
+Message-ID: <200502151049.j1FAnmqs020836@snark.thyrsus.com>
+
+Release 2.12 of gpsd is now available at:
+
+	http://developer.berlios.de/projects/gpsd/
+
+Here are the most recent changes:
+
+- Fixed core-dump bug in processing of the GLL variant that does not
+  include an FAA Mode Indicator. When using the NMEA driver, gpsd now
+  hunts for a baud rate rather than requiring a fixed one to be set.
+  A new 'B' command returns the RS232 parameters, and a new 'C'
+  command returns the update cycle time.  Added gpsfake test harness.
+  Alpha driver for Garmin binary protocol added, requires Linux
+  garmin_usb kernel driver.  The daemon now always passes up a
+  timestamp for every sentence that has one, even if the PVT fields
+  aren't valid.
+
+--
+                             shipper, acting for esr at snark.thyrsus.com
+
+
+From esr at snark.thyrsus.com  Tue Feb 22 05:07:36 2005
+From: esr at snark.thyrsus.com (Eric S. Raymond)
+Date: Mon, 21 Feb 2005 23:07:36 -0500
+Subject: [Gpsd-announce] Announcing release 2.13 of gpsd
+Message-ID: <200502220407.j1M47aVB031108@snark.thyrsus.com>
+
+Release 2.13 of gpsd is now available at:
+
+	http://developer.berlios.de/projects/gpsd/
+
+Here are the most recent changes:
+
+- Correct a bug in binary-protocol dumping (applies to Zodiac and
+  Garmin only).  Gary Miller's patch to deal gracefully with GPSes
+  like the Magellan EC10X that send only GPRMC and never GPGGA or
+  GPGSA, and thus never set mode or status fields.  Fixed buggy
+  handling of units options in xgps and xgpsspeed.  Bumped library
+  major version, since seen_sentences is now exposed and drivers have
+  more capabilities.  Stricter NMEA buffer validation.  Withdrew the
+  change that always passed up a timestamp; on SiRF-IIs, the year part
+  is garbage when the PVT fields are garbage.  Can now recognize
+  SiRF-II GPSes.  Experimental baud-switching support for Zodiac.
+
+--
+                             shipper, acting for esr at snark.thyrsus.com
+
+
+From esr at snark.thyrsus.com  Fri Feb 25 12:23:00 2005
+From: esr at snark.thyrsus.com (Eric S. Raymond)
+Date: Fri, 25 Feb 2005 06:23:00 -0500
+Subject: [Gpsd-announce] Announcing release 2.14 of gpsd
+Message-ID: <200502251123.j1PBN0IA014749@snark.thyrsus.com>
+
+Release 2.14 of gpsd is now available at:
+
+	http://developer.berlios.de/projects/gpsd/
+
+Here are the most recent changes:
+
+- Pass zero magnetic variation in generated NMEA from binary GPSes
+  correctly.  Use O_SYNC rather than timeouts to guarantee that 
+  baud-rate change strings get to the GPS before changing the line
+  parameters.  Introduced I command.  Spatial scattergram plotting
+  moved from gpsprobe to gpsprof.
+
+--
+                             shipper, acting for esr at snark.thyrsus.com
+
+

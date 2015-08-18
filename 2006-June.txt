@@ -1,0 +1,22 @@
+From esr at thyrsus.com  Fri Jun  9 17:23:18 2006
+From: esr at thyrsus.com (Eric S. Raymond)
+Date: Fri, 9 Jun 2006 11:23:18 -0400
+Subject: [Gpsd-announce] Announcing release 2.33 of gpsd
+Message-ID: <200606091523.k59FNIFn008133@snark.thyrsus.com>
+
+Release 2.33 of gpsd is now available at:
+
+	http://developer.berlios.de/projects/gpsd/
+
+Here are the most recent changes:
+
+- Fix bad unit conversion in V output.  Clean up some man-page messes.
+  Fixed buggy libgps parsing of multiple responses.  It's now possible
+  to lock gpsd to a fixed speed at compile time for embedded use.  Added
+  NTRIP support, thanks to Ville Nuorvala.  O command now ships an
+  explicit mode field.
+
+--
+                             shipper, acting for esr at snark.thyrsus.com
+
+

@@ -1,0 +1,121 @@
+From esr at snark.thyrsus.com  Wed Sep  8 21:37:37 2004
+From: esr at snark.thyrsus.com (Eric S. Raymond)
+Date: Wed, 8 Sep 2004 15:37:37 -0400
+Subject: [Gpsd-announce] Announcing release 1.97 of gpsd
+Message-ID: <200409081937.i88Jbb3o031864@snark.thyrsus.com>
+
+Release 1.97 of gpsd is now available at:
+
+	http://developer.berlios.de/projects/gpsd/
+
+Here are the most recent changes:
+
+  Removed PRWIZCH support (it still passes through in raw mode).
+  Build Motif-dependent programs conditionally.  Added gpsprobe.
+  Fixed a brown-paper-bag-bug in 1.96 RPM packaging.
+
+--
+                             shipper, acting for esr at snark.thyrsus.com
+
+
+From esr at snark.thyrsus.com  Tue Sep 14 06:07:16 2004
+From: esr at snark.thyrsus.com (Eric S. Raymond)
+Date: Tue, 14 Sep 2004 00:07:16 -0400
+Subject: [Gpsd-announce] Announcing release 1.98 of gpsd
+Message-ID: <200409140407.i8E47GRC011399@snark.thyrsus.com>
+
+Release 1.98 of gpsd is now available at:
+
+	http://developer.berlios.de/projects/gpsd/
+
+Here are the most recent changes:
+
+- Only do one getdtablesize() call, otherwise we do several
+  getrlimits() each poll cycle.  TripMate is working.  gpsprobe now
+  deduces NMEA version.  Zodiac Earthmate seems to work.
+
+--
+                             shipper, acting for esr at snark.thyrsus.com
+
+
+From esr at snark.thyrsus.com  Fri Sep 17 23:11:05 2004
+From: esr at snark.thyrsus.com (Eric S. Raymond)
+Date: Fri, 17 Sep 2004 17:11:05 -0400
+Subject: [Gpsd-announce] Announcing release 2.0 of gpsd
+Message-ID: <200409172111.i8HLB5gF014415@snark.thyrsus.com>
+
+Release 2.0 of gpsd is now available at:
+
+	http://developer.berlios.de/projects/gpsd/
+
+Here are the most recent changes:
+
+- Packaging fixes for 2.0 release
+
+--
+                             shipper, acting for esr at snark.thyrsus.com
+
+
+From esr at snark.thyrsus.com  Thu Sep 30 14:31:16 2004
+From: esr at snark.thyrsus.com (Eric S. Raymond)
+Date: Thu, 30 Sep 2004 08:31:16 -0400
+Subject: [Gpsd-announce] Announcing release 2.0 of gpsd
+Message-ID: <200409301231.i8UCVGdi006655@snark.thyrsus.com>
+
+Release 2.0 of gpsd is now available at:
+
+	http://developer.berlios.de/projects/gpsd/
+
+Here are the most recent changes:
+
+- Various internal cleanups, including fossil removal in the
+  configuration machinery.  FV-18, Tripmate, Earthmate and are now
+  enabled but can be disable with --disable-$NAME at configure time.
+  When you call configure with --disable-shared, libgps is linked
+  statically to the binaries (native libs are still linked
+  shared). Fixed buggy handling of -p option in gps.c and xgpsspeed.c;
+  it's now an optional command-line argument.
+
+--
+                             shipper, acting for esr at snark.thyrsus.com
+
+
+From esr at snark.thyrsus.com  Thu Sep 30 14:36:06 2004
+From: esr at snark.thyrsus.com (Eric S. Raymond)
+Date: Thu, 30 Sep 2004 08:36:06 -0400
+Subject: [Gpsd-announce] Please ignore previous release announcement
+Message-ID: <200409301236.i8UCa66b006728@snark.thyrsus.com>
+
+My shipping scripts had a hiccup.  Correct 2.1 will issue shortly.
+-- 
+		<a href="http://www.catb.org/~esr/">Eric S. Raymond</a>
+
+We shall not cease from exploration, and the end of all our exploring will be
+to arrive where we started and know the place for the first time.
+	-- T.S. Eliot
+
+
+From esr at snark.thyrsus.com  Thu Sep 30 14:42:22 2004
+From: esr at snark.thyrsus.com (Eric S. Raymond)
+Date: Thu, 30 Sep 2004 08:42:22 -0400
+Subject: [Gpsd-announce] Announcing release 2.1 of gpsd
+Message-ID: <200409301242.i8UCgM5f021745@snark.thyrsus.com>
+
+Release 2.1 of gpsd is now available at:
+
+	http://developer.berlios.de/projects/gpsd/
+
+Here are the most recent changes:
+
+- Various internal cleanups, including fossil removal in the
+  configuration machinery.  FV-18, Tripmate, Earthmate and are now
+  enabled but can be disable with --disable-$NAME at configure time.
+  When you call configure with --disable-shared, libgps is linked
+  statically to the binaries (native libs are still linked
+  shared). Fixed buggy handling of -p option in gps.c and xgpsspeed.c;
+  it's now an optional command-line argument.
+
+--
+                             shipper, acting for esr at snark.thyrsus.com
+
+

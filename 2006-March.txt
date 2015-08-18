@@ -1,0 +1,41 @@
+From esr at snark.thyrsus.com  Mon Mar 13 04:36:17 2006
+From: esr at snark.thyrsus.com (Eric S. Raymond)
+Date: Sun, 12 Mar 2006 22:36:17 -0500
+Subject: [Gpsd-announce] Announcing release 2.32 of gpsd
+Message-ID: <200603130336.k2D3aHuh021888@snark.thyrsus.com>
+
+Release 2.32 of gpsd is now available at:
+
+	http://developer.berlios.de/projects/gpsd/
+
+Here are the most recent changes:
+
+- Cleanup of the xgps layout, and minor memory-leak fixes for xgps.  Fix
+  to cope with Antares uBlox by Andreas Stricker.  Minor fix to libgps
+  cgpxlogger.  Merge cgpxlogger and gpxlogger documentation onto
+  the xgps(1) manual page and rename it gps(1).
+
+--
+                             shipper, acting for esr at snark.thyrsus.com
+
+
+From esr at thyrsus.com  Mon Mar 13 21:49:31 2006
+From: esr at thyrsus.com (Eric S. Raymond)
+Date: Mon, 13 Mar 2006 15:49:31 -0500
+Subject: [Gpsd-announce] Re: [Gpsd-users] Announcing release 2.32 of gpsd
+In-Reply-To: <380-220063113201041141@M2W098.mail2web.com>
+References: <380-220063113201041141@M2W098.mail2web.com>
+Message-ID: <20060313204931.GA29930@thyrsus.com>
+
+robin at spade-men.com <robin at spade-men.com>:
+> The serious bug in the velocity output of GPSD (identified and patched in
+> 2.30 and 2.31) is still in this point release.  
+
+Damn!  How many times do I have to pound on this one until it actually takes?
+
+Would you please look at the SVN archive and make sure the fix is there 
+this time?
+-- 
+		<a href="http://www.catb.org/~esr/">Eric S. Raymond</a>
+
+

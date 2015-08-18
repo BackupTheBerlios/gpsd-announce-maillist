@@ -1,0 +1,51 @@
+From esr at snark.thyrsus.com  Wed Jul  6 13:45:00 2005
+From: esr at snark.thyrsus.com (Eric S. Raymond)
+Date: Wed, 6 Jul 2005 07:45:00 -0400
+Subject: [Gpsd-announce] Announcing release 2.27 of gpsd
+Message-ID: <200507061145.j66Bj04E020289@snark.thyrsus.com>
+
+Release 2.27 of gpsd is now available at:
+
+	http://developer.berlios.de/projects/gpsd/
+
+Here are the most recent changes:
+
+- Arrange for the daemon to remove its pid file on exit.  Fix some
+  buffering problems with the Python side of the hotplug interface.
+  gpsfake can now run sessions under a monitor like Valgrind.  Most
+  of the gpsfake logic now lives in a module that can be used to write
+  other test loads; its progress baton is now optional.  Fixed
+  some minor bugs found by valgrind audit, including (1) a slow
+  memory leak, (2) a possible but unconfirmed file-descriptor leak, 
+  and (3) a subtle error in the channel-assignment logic that only
+  showed up with multiple sessions active.  In fact, the daemon code
+  no longer uses dynamic-memory allocation at all.  Also, the code
+  no longer relies on FIONREAD working.  The track error field in the
+  O response is now computed.  The project website has some new eye candy.
+  Client connections now time out when the mode is neither raw nor watcher.
+
+--
+                             shipper, acting for esr at snark.thyrsus.com
+
+
+From esr at snark.thyrsus.com  Wed Jul  6 15:43:13 2005
+From: esr at snark.thyrsus.com (Eric S. Raymond)
+Date: Wed, 6 Jul 2005 09:43:13 -0400
+Subject: [Gpsd-announce] Announcing release 2.28 of gpsd
+Message-ID: <200507061343.j66DhDo8018180@snark.thyrsus.com>
+
+Release 2.28 of gpsd is now available at:
+
+	http://developer.berlios.de/projects/gpsd/
+
+Here are the most recent changes:
+
+- The 2.27 source tarball somehow got truncated on upload.
+  Due to procedural mechanics at berlios.de, shipping a new release
+  seems to be the least painful way to recover.  This release is
+  identical to 2.27 except the roadmap stuff has been added to TODO.
+
+--
+                             shipper, acting for esr at snark.thyrsus.com
+
+

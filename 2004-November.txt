@@ -1,0 +1,20 @@
+From esr at snark.thyrsus.com  Tue Nov  2 01:42:04 2004
+From: esr at snark.thyrsus.com (Eric S. Raymond)
+Date: Mon, 1 Nov 2004 19:42:04 -0500
+Subject: [Gpsd-announce] Announcing release 2.3 of gpsd
+Message-ID: <200411020042.iA20g4aZ003266@snark.thyrsus.com>
+
+Release 2.3 of gpsd is now available at:
+
+	http://developer.berlios.de/projects/gpsd/
+
+Here are the most recent changes:
+
+- Documentation and comment fixes.  Last two globals removed from 
+  low-level interface; library should now be fully re-entrant. Mac OS X
+  port fixes. Q command fix from Robin L Darroch <robin at spade-men.com>.
+
+--
+                             shipper, acting for esr at snark.thyrsus.com
+
+

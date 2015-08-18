@@ -1,0 +1,20 @@
+From esr at snark.thyrsus.com  Mon Feb 20 02:17:12 2006
+From: esr at snark.thyrsus.com (Eric S. Raymond)
+Date: Sun, 19 Feb 2006 20:17:12 -0500
+Subject: [Gpsd-announce] Announcing release 2.31 of gpsd
+Message-ID: <200602200117.k1K1HCf7019575@snark.thyrsus.com>
+
+Release 2.31 of gpsd is now available at:
+
+	http://developer.berlios.de/projects/gpsd/
+
+Here are the most recent changes:
+
+2006-02-18  Eric S. Raymond  <esr at snark.thyrsus.com>
+
+	* xgps.c: Typo fix.
+
+--
+                             shipper, acting for esr at snark.thyrsus.com
+
+

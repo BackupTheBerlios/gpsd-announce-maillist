@@ -1,0 +1,16 @@
+From esr at snark.thyrsus.com  Mon Oct  3 03:31:17 2011
+From: esr at snark.thyrsus.com (Eric Raymond)
+Date: Sun,  2 Oct 2011 21:31:17 -0400 (EDT)
+Subject: [Gpsd-announce] The GPSD lists are moving
+Message-ID: <20111003013117.4360D20C3B7@snark.thyrsus.com>
+
+List archivists:
+
+The GPSD project has moved to Savannah to avoid the impending shutdown
+of Berlios. There are now corresponding mailing lists hosted at 'nongnu.org'.
+-- 
+		<a href="http://www.catb.org/~esr/">Eric S. Raymond</a>
+
+Everything you know is wrong.  But some of it is a useful first approximation.
+
+

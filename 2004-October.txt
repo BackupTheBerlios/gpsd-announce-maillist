@@ -1,0 +1,23 @@
+From esr at snark.thyrsus.com  Mon Oct 18 17:02:56 2004
+From: esr at snark.thyrsus.com (Eric S. Raymond)
+Date: Mon, 18 Oct 2004 11:02:56 -0400
+Subject: [Gpsd-announce] Announcing release 2.2 of gpsd
+Message-ID: <200410181502.i9IF2uBP021306@snark.thyrsus.com>
+
+Release 2.2 of gpsd is now available at:
+
+	http://developer.berlios.de/projects/gpsd/
+
+Here are the most recent changes:
+
+  Documentation improvements.  BSD port fixes.  Bug fix: speed timestamp
+  wasn't initialized properly in libgps. Device is now an optional 
+  command-line argument of gpsprobe, in line with the clients.  gpsd.py
+  now should handle fvwm devices correctly.  Values in gps data
+  panel are now labeled with units.  Attempted fix for 2.1 bug of DTR
+  not being pulled low on exit.
+
+--
+                             shipper, acting for esr at snark.thyrsus.com
+
+
